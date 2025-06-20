@@ -1,0 +1,21 @@
+# Parameters for the leadgen application
+
+# Default questions
+default_questions:
+  - "What is your business name and what products or services do you offer?"
+  - "Who are your current customers and what industries do they belong to?"
+  - "What are the main pain points or challenges your product/service solves?"
+  - "Who do you consider your ideal customer and why?"
+  - "What are your business goals for the next 6-12 months?"
+
+# Agent parameters
+agent_params:
+  temperature: 0.7
+  max_tokens: 2000
+  top_p: 0.95
+
+# Process parameters
+process:
+  save_responses: true
+  generate_icp: true
+  generate_keywords: true

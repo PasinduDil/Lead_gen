@@ -1,0 +1,77 @@
+# Schema definitions for the leadgen application
+
+# Question schema
+question:
+  type: object
+  properties:
+    id:
+      type: string
+      description: Unique identifier for the question
+    text:
+      type: string
+      description: The question text
+    stage:
+      type: string
+      description: The stage of the questioning process (default, personalized, etc.)
+    order:
+      type: integer
+      description: The order of the question in its stage
+
+# Answer schema
+answer:
+  type: object
+  properties:
+    question_id:
+      type: string
+      description: ID of the question being answered
+    text:
+      type: string
+      description: The answer text
+    timestamp:
+      type: string
+      format: date-time
+      description: When the answer was provided
+
+# Keyword schema
+keyword:
+  type: object
+  properties:
+    text:
+      type: string
+      description: The keyword text
+    relevance_score:
+      type: number
+      description: Relevance score of the keyword (0-1)
+    type:
+      type: string
+      description: Type of keyword (short-tail, long-tail, etc.)
+
+# Ideal Customer Profile schema
+ideal_customer_profile:
+  type: object
+  properties:
+    demographics:
+      type: object
+      description: Demographic information about the ideal customer
+    firmographics:
+      type: object
+      description: Firmographic information for B2B profiles
+    psychographics:
+      type: object
+      description: Psychographic information about the ideal customer
+    behaviors:
+      type: object
+      description: Behavioral patterns of the ideal customer
+    pain_points:
+      type: array
+      items:
+        type: string
+      description: Pain points the ideal customer experiences
+    goals:
+      type: array
+      items:
+        type: string
+      description: Goals of the ideal customer
+    buying_patterns:
+      type: object
+      description: Buying patterns and preferences of the ideal customer

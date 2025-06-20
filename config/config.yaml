@@ -1,0 +1,23 @@
+# Main configuration file for the leadgen application
+
+# LLM Configuration
+llm:
+  provider: "groq"
+  model: "qwen/qwen3-32b"
+
+# Application Configuration
+application:
+  name: "LeadGen"
+  version: "0.1.0"
+  description: "Lead generation application with multi-step questioning process"
+
+# Question Configuration
+questions:
+  default_count: 5
+  personalized_count: 10
+  keyword_count: 10
+
+# Data Storage
+storage:
+  type: "local"
+  path: "./data"
